@@ -31,23 +31,41 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from setuptools import setup
-import sys
+from setuptools import setup, find_packages
+import sys, os
 
-sys.path.append('python')
+here = os.path.abspath(os.path.dirname(__file__))
+README = open(os.path.join(here, 'README.rst')).read()
+NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
-from prowlpy import __author__ 
-from prowlpy import __version__
 
-long_description = '''
-Python module for posting to the iPhone Push Notification service Prowl: http://prowl.weks.net/
-'''
+version = '0.5'
 
-setup(
-        name = 'prowlpy',
-        packages = ['prowlpy'],
-        package_dir= {'prowlpy': 'python'},
-        version = __version__,
-        description= 'Python module for Prowl iPhone notification service',
-        author = __author__,
-)        
+install_requires = [
+    # List your project dependencies here.
+    # For more details, see:
+    # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
+]
+
+
+setup(name='prowlpy',
+    version=version,
+    description="Python module for Prowl iPhone notification service",
+    long_description=README + '\n\n' + NEWS,
+    classifiers=[
+      # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    ],
+    keywords='send push notification to iPhones.prowl',
+    author='Jacob Burch',
+    author_email='jacoburch@gmail.com',
+    url='https://github.com/jacobb/prowlpy',
+    license='',
+    packages=find_packages('src'),
+    package_dir = {'': 'src'},include_package_data=True,
+    zip_safe=False,
+    install_requires=install_requires,
+    entry_points={
+        'console_scripts':
+            ['prowlpy=prowlpy:main']
+    }
+)

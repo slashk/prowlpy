@@ -53,9 +53,7 @@ __author__ = 'Jacob Burch'
 __author_email__ = 'jacoburch@gmail.com'
 __maintainer__ = 'Olivier Hervieu'
 __maintainer_email__ = 'olivier.hervieu@gmail.com'
-__maintainer__ = 'Ken Pepple'
-__maintainer_email__ = 'ken.pepple@gmail.com'
-__version__ = 0.50
+__version__ = 0.500
 
 from httplib import HTTPSConnection as Https
 from urllib import urlencode

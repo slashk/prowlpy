@@ -1,0 +1,11 @@
+MANIFEST.in
+NEWS.txt
+README.rst
+setup.py
+src/prowlpy/__init__.py
+src/prowlpy.egg-info/PKG-INFO
+src/prowlpy.egg-info/SOURCES.txt
+src/prowlpy.egg-info/dependency_links.txt
+src/prowlpy.egg-info/entry_points.txt
+src/prowlpy.egg-info/not-zip-safe
+src/prowlpy.egg-info/top_level.txt
