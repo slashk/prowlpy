@@ -38,21 +38,22 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 
-version = '0.5'
+version = '0.52'
 
-install_requires = [
-    # List your project dependencies here.
-    # For more details, see:
-    # http://packages.python.org/distribute/setuptools.html#declaring-dependencies
+install_requires = []
+tests_require = [
+    mox,
+    nose
 ]
-
 
 setup(name='prowlpy',
     version=version,
     description="Python module for Prowl iPhone notification service",
     long_description=README + '\n\n' + NEWS,
     classifiers=[
-      # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      "Development Status :: 4 - Beta",
+      "Framework :: Paste",
+      "Natural Language :: English"
     ],
     keywords='send push notification to iPhones.prowl',
     author='Jacob Burch',

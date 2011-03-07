@@ -9,6 +9,11 @@ News
 Change Log:
 ===========
 
+v0.51
+-----
+- retrieve_token and retrieve_apikey return dictionaries of full prowl server response
+- updated example script
+
 v0.50
 -----
 
@@ -26,7 +31,8 @@ V0.42
 -----
 
 - Got rid of Now-uncessary URL Encoding.
-- Working on incorporating forked changes while not totally breaking backward compatibility with the vanilla add function
+- Working on incorporating forked changes while not totally breaking backward 
+compatibility with the vanilla add function
 
 V0.41
 -----
