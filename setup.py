@@ -41,10 +41,7 @@ NEWS = open(os.path.join(here, 'NEWS.txt')).read()
 version = '0.52'
 
 install_requires = []
-tests_require = [
-    mox,
-    nose
-]
+tests_require = []
 
 setup(name='prowlpy',
     version=version,

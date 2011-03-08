@@ -1,26 +1,28 @@
 Metadata-Version: 1.0
 Name: prowlpy
-Version: 0.5
-Summary: Python Prowlpy is a python module that implement the public api of Prowl to
+Version: 0.52
+Summary: Python module for Prowl iPhone notification service
 Home-page: https://github.com/jacobb/prowlpy
 Author: Jacob Burch
 Author-email: jacoburch@gmail.com
 License: UNKNOWN
-Description: This file requires editing
-        ==========================
+Description: =======
+        Prowlpy
+        =======
         
-        Note to the author: Please add something informative to this README *before*
-        releasing your software, as `a little documentation goes a long way`_.  Both
-        README.rst (this file) and NEWS.txt (release notes) will be included in your
-        package metadata which gets displayed in the PyPI page for your project.
+        | Originally Written by Jacob Burch, 7/6/2009
+        | Modified by Olivier Hervieu
+        | Updated for Prowl API 1.2 by Ken Pepple, 3/5/2011
         
-        You can take a look at the README.txt of other projects, such as repoze.bfg
-        (http://bfg.repoze.org/trac/browser/trunk/README.txt) for some ideas.
+        Python module for posting to the iPhone Push Notification service Prowl: http://www.prowlapp.com/
         
-        .. _`a little documentation goes a long way`: http://www.martinaspeli.net/articles/a-little-documentation-goes-a-long-way
+        Dependencies:
+        =============
         
-        Credits
-        -------
+        No extra dependency (Prowlpy use only basic python modules) unless testing is desired.
+        
+        The socket module must be compiled with SSL support.
+        
         
         - `Distribute`_
         - `Buildout`_
@@ -39,21 +41,64 @@ Description: This file requires editing
         News
         ====
         
-        0.2a1
+        Change Log:
+        ===========
+        
+        v0.51
+        -----
+        - retrieve_token and retrieve_apikey return dictionaries of full prowl server response
+        - updated example script
+        
+        v0.50
         -----
         
-        *Release date: UNRELEASED*
+        - updated for prowl API v1.2 
+        - added retrieve_apikey and retrieve_token
+        - add new example script
+        - added url support for post
         
-        * Example news entry for the in-development version
+        V0.43
+        -----
         
+        - Remove httplib2 dependency, add providerkey support.
         
-        0.1
-        ---
+        V0.42
+        -----
         
-        *Release date: 15-Mar-2010*
+        - Got rid of Now-uncessary URL Encoding.
+        - Working on incorporating forked changes while not totally breaking backward 
+        compatibility with the vanilla add function
         
-        * Example news entry for a released version
+        V0.41
+        -----
         
+        - Adding priority setting
+        - Removed debug code
         
+        V0.4
+        ----
+        
+        - Added Prowl.add alias for Post
+        - Switched post to use (oddly enough) POST instead of GET
+        - Added a Prowl.veryify_key method
+        
+        V0.3
+        ----
+        
+        - Changed to handle the new API system.
+        
+        V0.2
+        ----
+        
+        - Basic working module
+        
+        Todo:
+        -----
+        
+        - Test against character-limits.
+        - More detailed Exceptions based on the returned XML document
 Keywords: send push notification to iPhones.prowl
 Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Paste
+Classifier: Natural Language :: English

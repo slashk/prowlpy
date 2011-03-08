@@ -51,17 +51,13 @@ which implements four methods :
   retrieve/token.
 """
 
-__author__ = 'Jacob Burch'
-__author_email__ = 'jacoburch@gmail.com'
-__maintainer__ = 'Olivier Hervieu'
-__maintainer_email__ = 'olivier.hervieu@gmail.com'
-
 from httplib import HTTPSConnection as Https
 from urllib import urlencode
 from xml.dom import minidom
 
 API_DOMAIN = 'api.prowlapp.com'
 
+__version__ = 0.52
 
 class Prowl(object):
     def __init__(self, apikey, providerkey=None):
