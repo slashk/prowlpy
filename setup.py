@@ -3,6 +3,7 @@
 
 # Copyright (c) 2009, Jaccob Burch
 # Copyright (c) 2010, Olivier Hervieu
+# Copyright (c) 2011, Ken Pepple
 #
 # All rights reserved.
 #
@@ -30,6 +31,8 @@
 # ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# http://packages.python.org/distribute/setuptools.html
 
 import distribute_setup
 distribute_setup.use_setuptools()
@@ -61,7 +64,8 @@ setup(name='prowlpy',
     url='https://github.com/jacobb/prowlpy',
     license='',
     packages=find_packages('src'),
-    package_dir = {'': 'src'},include_package_data=True,
+    package_dir = {'': 'src'},
+    include_package_data=True,
     zip_safe=False,
     install_requires=install_requires,
     entry_points={
