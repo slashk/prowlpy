@@ -33,7 +33,6 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # http://packages.python.org/distribute/setuptools.html
-
 import distribute_setup
 distribute_setup.use_setuptools()
 

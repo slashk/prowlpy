@@ -57,6 +57,7 @@ from xml.dom import minidom
 API_DOMAIN = 'api.prowlapp.com'
 VERSION = '0.52'
 
+
 class Prowl(object):
     def __init__(self, apikey, providerkey=None):
         """
@@ -94,7 +95,8 @@ class Prowl(object):
                 "Not acceptable, your IP address has exceeded the API limit")
         elif error_code == 409:
             raise Exception(
-                "Not approved, the user has yet to approve your retrieve request")
+                "Not approved, the user has yet to \
+                approve your retrieve request")
         elif error_code == 500:
             raise Exception(
                 "Internal server error")
